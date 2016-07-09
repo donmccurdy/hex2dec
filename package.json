@@ -1,0 +1,31 @@
+{
+  "name": "hex2dec",
+  "version": "1.0.0",
+  "description": "Arbitrary precision decimal/hexadecimal converter.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/donmccurdy/hex2dec.git"
+  },
+  "keywords": [
+    "decimal",
+    "hexadecimal",
+    "converter",
+    "precision",
+    "int64",
+    "long",
+    "hex"
+  ],
+  "contributors": [
+    "Dan Vanderkam <danvdk@gmail.com>",
+    "Don McCurdy <dm@donmccurdy.com>"
+  ],
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/donmccurdy/hex2dec/issues"
+  },
+  "homepage": "https://github.com/donmccurdy/hex2dec#readme"
+}
