@@ -8,7 +8,7 @@ Arbitrary precision decimal↔️hexadecimal converter, from a [blog post](http:
 npm install --save hex2dec
 ```
 
-```
+```javascript
 var converter = require('hex2dec');
 
 var hex = converter.hexToDec('0xFA'); // 250
