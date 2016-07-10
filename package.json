@@ -4,7 +4,9 @@
   "description": "Arbitrary precision decimal/hexadecimal converter.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha tests/*.test.js",
+    "preversion": "npm test",
+    "postversion": "git push && git push --tags && npm publish"
   },
   "repository": {
     "type": "git",
@@ -27,5 +29,9 @@
   "bugs": {
     "url": "https://github.com/donmccurdy/hex2dec/issues"
   },
-  "homepage": "https://github.com/donmccurdy/hex2dec#readme"
+  "homepage": "https://github.com/donmccurdy/hex2dec#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
+  }
 }
