@@ -1,6 +1,6 @@
 {
   "name": "hex2dec",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Arbitrary precision decimal/hexadecimal converter.",
   "main": "index.js",
   "scripts": {
