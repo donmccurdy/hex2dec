@@ -11,8 +11,8 @@ npm install --save hex2dec
 ```javascript
 var converter = require('hex2dec');
 
-var hex = converter.hexToDec('0xFA'); // 250
-var dec = converter.decToHex('250'); // '0xfa'
+var dec = converter.hexToDec('0xFA'); // 250
+var hex = converter.decToHex('250'); // '0xfa'
 ```
 
 ## Why use hex2dec
