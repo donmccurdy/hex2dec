@@ -13,6 +13,7 @@ var converter = require('hex2dec');
 
 var dec = converter.hexToDec('0xFA'); // 250
 var hex = converter.decToHex('250'); // '0xfa'
+var hexString = converter.decToHex('250', { prefix: false }); // 'fa'
 ```
 
 ## Why use hex2dec
