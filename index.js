@@ -83,9 +83,10 @@ function convertBase(str, fromBase, toBase) {
   return out;
 }
 
-function decToHex(decStr) {
+function decToHex(decStr, opts) {
+  var hidePrefix = opts && opts.prefix === false;
   var hex = convertBase(decStr, 10, 16);
-  return hex ? '0x' + hex : null;
+  return hex ? (hidePrefix ? hex : '0x' + hex) : null;
 }
 
 function hexToDec(hexStr) {
