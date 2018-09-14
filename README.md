@@ -1,5 +1,9 @@
 # hex2dec
 
+[![Latest NPM release](https://img.shields.io/npm/v/hex2dec.svg)](https://www.npmjs.com/package/hex2dec)
+[![License](https://img.shields.io/npm/l/hex2dec.svg)](https://github.com/donmccurdy/hex2dec/blob/master/LICENSE)
+[![Build Status](https://travis-ci.com/donmccurdy/hex2dec.svg?branch=master)](https://travis-ci.com/donmccurdy/hex2dec)
+
 Arbitrary precision decimal↔️hexadecimal converter, from a [blog post](http://www.danvk.org/hex2dec.html) by [Dan Vanderkam](https://github.com/danvk).
 
 ## Usage
