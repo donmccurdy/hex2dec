@@ -80,6 +80,9 @@ function convertBase(str, fromBase, toBase) {
   for (var i = outArray.length - 1; i >= 0; i--) {
     out += outArray[i].toString(toBase);
   }
+  if (out === '') {
+    out = '0';
+  }
   return out;
 }
 

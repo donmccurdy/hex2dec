@@ -6,6 +6,7 @@ describe('hex2dec', function() {
   it('should convert small hex', function () {
     expect(util.hexToDec('FA')).to.equal('250');
     expect(util.hexToDec('0xFA')).to.equal('250');
+    expect(util.hexToDec('0x0')).to.equal('0');
   });
 
   it('should convert long hex', function () {
@@ -14,6 +15,7 @@ describe('hex2dec', function() {
 
   it('should convert small decimal', function () {
     expect(util.decToHex('57')).to.equal('0x39');
+    expect(util.decToHex('0')).to.equal('0x0');
   });
 
   it('should convert 128-bit decimal', function () {
