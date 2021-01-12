@@ -1,30 +1,40 @@
-var chai = require('chai'),
-    expect = chai.expect,
-    util = require('../');
+const test = require('tape');
+const {hexToDec, decToHex} = require('../');
 
-describe('hex2dec', function() {
-  it('should convert small hex', function () {
-    expect(util.hexToDec('FA')).to.equal('250');
-    expect(util.hexToDec('0xFA')).to.equal('250');
-    expect(util.hexToDec('0x0')).to.equal('0');
-  });
+test('should convert small hex', (t) => {
+  t.equals(hexToDec('FA'), '250', 'FA → 250');
+  t.equals(hexToDec('0xFA'), '250', '0xFA → 250');
+  t.equals(hexToDec('0x0'), '0', '0x0 → 0');
+  t.end();
+});
 
-  it('should convert long hex', function () {
-    expect(util.hexToDec('0x89B6E64A8EC5FFFF')).to.equal('9923372036854775807');
-  });
+test('should convert long hex', (t) => {
+  t.equals(
+    hexToDec('0x89B6E64A8EC5FFFF'),
+    '9923372036854775807',
+    '0x89B6E64A8EC5FFFF → 9923372036854775807'
+  );
+  t.end();
+});
 
-  it('should convert small decimal', function () {
-    expect(util.decToHex('57')).to.equal('0x39');
-    expect(util.decToHex('0')).to.equal('0x0');
-  });
+test('should convert small decimal', (t) => {
+  t.equals(decToHex('57'), '0x39', '57 → 0x39');
+  t.equals(decToHex('0'), '0x0', '0 → 0x0');
+  t.end();
+});
 
-  it('should convert 128-bit decimal', function () {
-    expect(util.decToHex('9923372036854775807')).to.equal('0x89b6e64a8ec5ffff');
-  });
+test('should convert 128-bit decimal', (t) => {
+  t.equals(
+    decToHex('9923372036854775807'),
+    '0x89b6e64a8ec5ffff',
+    '9923372036854775807 → 0x89b6e64a8ec5ffff'
+  );
+  t.end();
+});
 
-  it('should return null for invalid input', function () {
-    expect(util.decToHex('ode to the boom')).to.be.null;
-    expect(util.decToHex('-750')).to.be.null;
-    expect(util.decToHex('0xFA')).to.be.null;
-  });
+test('should return null for invalid input', (t) => {
+  t.equals(decToHex('ode to the boom'), null, 'nonsense');
+  t.equals(decToHex('-750'), null, 'negative integer');
+  t.equals(decToHex('0xFA'), null, 'hexadecimal');
+  t.end();
 });
