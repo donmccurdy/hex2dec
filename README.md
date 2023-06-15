@@ -1,7 +1,7 @@
 # hex2dec
 
 [![Latest NPM release](https://img.shields.io/npm/v/hex2dec.svg)](https://www.npmjs.com/package/hex2dec)
-[![Minzipped size](https://badgen.net/bundlephobia/minzip/hex2dec)](https://bundlephobia.com/result?p=hex2dec)
+[![npm bundle size](https://img.shields.io/bundlephobia/minzip/hex2dec)](https://bundlephobia.com/package/hex2dec)
 [![License](https://img.shields.io/npm/l/hex2dec.svg)](https://github.com/donmccurdy/hex2dec/blob/master/LICENSE)
 [![Build Status](https://github.com/donmccurdy/hex2dec/workflows/build/badge.svg?branch=master&event=push)](https://github.com/donmccurdy/hex2dec/actions?query=workflow%3Abuild)
 
